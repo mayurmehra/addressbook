@@ -6,7 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class AddressController {
-    
+
+    public HashmMap<Long, Address> database = new HashmMap<>();
+
     @PostMapping("/addresses")
     public Address saveAddress(@RequestBody Address address) {
         return address;// Save address

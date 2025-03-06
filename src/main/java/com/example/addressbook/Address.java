@@ -1,6 +1,7 @@
 package com.example.addressbook;
 
 public class Address {
+    private Long id;
     private String email;
     private String phone;
     private String address1;
@@ -8,6 +9,15 @@ public class Address {
     private String city;
     private String state;
     private String zip;
+
+    // Getter and Setter for id
+    public String getId() {
+        return email;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     // Getter and Setter for email
     public String getEmail() {

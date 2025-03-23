@@ -14,7 +14,8 @@ public class AddressService {
     private Map<String, Address> addresses = new HashMap<>();
 
     public Address save(Address address) {
-        if (address.getId() == null) {
+        if (address.getId() == "") {
+            System.out.println("Generating new UUID for address");
             address.setId(UUID.randomUUID().toString());
         }
         addresses.put(address.getId(), address);
@@ -22,6 +23,12 @@ public class AddressService {
     }
 
     public List<Address> getAllAddresses() {
+        // print all addresses to the console
+        // addresses.values().forEach(System.err::println);
         return new ArrayList<>(addresses.values());
+    }
+
+    public void delete(String id) {
+        addresses.remove(id);
     }
 }

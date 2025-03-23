@@ -2,6 +2,8 @@ package com.example.addressbook;
 
 public class Address {
     private String id;
+    private String firstname;
+    private String lastname;
     private String email;
     private String phone;
     private String address1;
@@ -17,6 +19,24 @@ public class Address {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    // Getter and Setter for firstname
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    // Getter and Setter for lastname
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     // Getter and Setter for email
@@ -80,5 +100,19 @@ public class Address {
 
     public void setZip(String zip) {
         this.zip = zip;
+    }
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "id='" + id + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", address1='" + address1 + '\'' +
+                ", address2='" + address2 + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zip='" + zip + '\'' +
+                '}';
     }
 }
